@@ -22,16 +22,17 @@ VERSION={
 	"mainVersion":"1.0",
 	"dateVersion":"20230608",
 	"versionDesc":[
-		"完成解密解压功能。",
 		"完善功能提示。",
+		"完成解密解压功能。",
+		"修复文本错误。",
 	""]
 },
 {
 	"mainVersion":"1.0",
 	"dateVersion":"20230607",
 	"versionDesc":[
-		"完成加密压缩功能。",
 		"实现基础功能。",
+		"完成加密压缩功能。",
 	""]
 }
 ]
@@ -337,9 +338,6 @@ def beginEncryptFiles(file):
 
 		return 0
 
-		# ___decryptConfigString=decryptEncryptConfig(password, loadFile('{}\\{}'.format(projOutputDir,configName)))
-		# print(___decryptConfigString)
-
 def beginDecryptFiles():
 	execFile=sys.argv[0]
 	execFileName=execFile.split('\\')[-1]
@@ -395,7 +393,7 @@ def beginDecryptFiles():
 	out.outlnC('[完成]','green','black',1)
 
 	# 生成解密KEY
-	out.outC('正在生成加密密钥……','cyan','black',1)
+	out.outC('正在生成解密密钥……','cyan','black',1)
 	encryptKey=calcEncryptKey(password,encryptConfig)
 	out.outlnC('[完成]','green','black',1)
 
