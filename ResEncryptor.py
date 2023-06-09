@@ -13,11 +13,21 @@ import platform
 import hashlib
 import colorout as out
 import json
+import send2trash
 from shutil import copyfile
 
 VERSION={
 "appName":"ResEncryptor",
 "versionUpdate":[
+{
+	"mainVersion":"1.0",
+	"dateVersion":"20230609",
+	"versionDesc":[
+		"加入自动清理压缩包功能（移入回收站）。",
+		"加入在找不到配置文件时，手动输入配置文件名功能。",
+		"将字符串中format引用变量的方法改为f''。",
+	""]
+},
 {
 	"mainVersion":"1.0",
 	"dateVersion":"20230608",
@@ -41,13 +51,13 @@ VERSION={
 Configs
 '''
 # 输出目录
-outputDir='{}\\output'.format(os.getcwd())
+outputDir=f'{os.getcwd()}\\output'
 # 分卷范围（此范围是压缩前的分卷范围，压缩后的情况不可知）
 volumeRange=[20,50]
 # 默认盐，和配置文件加解密有关，不可随便更换，否则不兼容其他版本
 defaultSalt='KnWn7ZYSa309KyYnruB0JXF9zIRAsQNx'
 # 配置文件名
-configName=hashlib.md5('config{}'.format(defaultSalt).encode(encoding='utf-8')).hexdigest()
+configName=hashlib.md5(f'config{defaultSalt}'.encode(encoding='utf-8')).hexdigest()
 '''
 Utils
 '''
@@ -55,9 +65,9 @@ def cmd(c):
 	os.system(c)
 
 def runBat(batStr,output=''):
-	writeFile('{}temp.bat'.format(output),batStr)
-	os.system('{}temp.bat'.format(output))
-	os.remove('{}temp.bat'.format(output))
+	writeFile(f'{output}temp.bat',batStr)
+	os.system(f'{output}temp.bat')
+	os.remove(f'{output}temp.bat')
 
 def pause(c=None):
 	if c:
@@ -118,7 +128,7 @@ def formatFileSize(b):
 	
 	# 保留两位小数，四舍五入
 	size = round(size * 100) / 100
-	return '{} {}'.format(size,units[unitIndex])
+	return f'{size} {units[unitIndex]}'
 
 def randomPassword(length=10):
 	pasArr = [
@@ -204,7 +214,7 @@ def genEncryptConfig(chead, ctail, desc):
 '''
 def encryptEncryptConfig(password,config,chead,ctail):
 	# return base64.b64encode('{}\b{}\b{}'.format(chead,json.dumps(config,ensure_ascii=False),ctail).encode(encoding='utf-8')).decode('UTF-8')
-	return AES_Encrypt(password,'{}\b{}\b{}'.format(chead,json.dumps(config,ensure_ascii=False),ctail)).decode('UTF-8')
+	return AES_Encrypt(password,f'{chead}\b{json.dumps(config,ensure_ascii=False)}\b{ctail}').decode('UTF-8')
 '''
 解密配置数据
 参数：已加密的配置数据
@@ -226,16 +236,16 @@ def calcEncryptKey(password, config):
 	passwordMd5=hashlib.md5((password+salt).encode(encoding='utf-8')).hexdigest()
 	# 生成时间戳和时间戳的MD5
 	timestamp=config['timestamp']
-	timestampMd5=hashlib.md5(('{}'.format(timestamp)).encode(encoding='utf-8')).hexdigest()
+	timestampMd5=hashlib.md5((f'{timestamp}').encode(encoding='utf-8')).hexdigest()
 	# 生成【密码的MD5|盐|时间戳】拼合的MD5
-	comitMd5=hashlib.md5(('{}|{}|{}'.format(passwordMd5,salt,timestamp)).encode(encoding='utf-8')).hexdigest()
+	comitMd5=hashlib.md5((f'{passwordMd5}|{salt}|{timestamp}').encode(encoding='utf-8')).hexdigest()
 	# 生成密钥：【密码的MD5盐的MD5时间戳的MD5拼合的MD5】，每个MD5长度32位，总密钥长度128位
-	encryptKey='{}{}{}{}'.format(passwordMd5,saltMd5,timestampMd5,comitMd5)
+	encryptKey=f'{passwordMd5}{saltMd5}{timestampMd5}{comitMd5}'
 	return encryptKey
 
 def makeOutputDir(addr):
-	dirs='{}\\{}'.format(outputDir,addr)
-	if not os.path.exists(dirs):
+	dirs=f'{outputDir}\\{addr}'
+	if not exist(dirs):
 		os.makedirs(dirs)
 	return dirs
 
@@ -270,7 +280,8 @@ def beginEncryptFiles(file):
 		# 创建输出目录，并写入必备文件
 		out.outC('创建输出目录并写入必备文件……','cyan','black',1)
 		projOutputDir=makeOutputDir(targetFileData['name'])
-		_7z.output7zExe('{}\\7z.exe'.format(projOutputDir))
+		projCfgname='cfname'
+		_7z.output7zExe(f'{projOutputDir}\\7z.exe')
 		volumeCount=random.randint(volumeRange[0],volumeRange[1])
 		volumeSize=int(targetFileData['fileSize'] / volumeCount)
 		out.outlnC('[完成]','green','black',1)
@@ -291,16 +302,16 @@ def beginEncryptFiles(file):
 
 		# 删除不需要的文件
 		out.outC('正在清理不必要的文件……','cyan','black',1)
-		os.remove('{projOutputDir}\\7z.exe'.format(**cmdParms))
+		os.remove(f'{projOutputDir}\\7z.exe')
 		out.outlnC('[完成]','green','black',1)
 
 		# 对文件进行乱序重命名
 		out.outC('正在重命名文件……','cyan','black',1)
-		renStr='@echo off\ncd {projOutputDir}\n'.format(**cmdParms)
+		renStr=f'@echo off\ncd {projOutputDir}\n'
 		for fp in getAllFileList(projOutputDir):
 			fileName=fp.split('\\')[-1]
 			fakeName=genSalt()
-			renStr+='ren "{}" "{}"\n'.format(fileName, fakeName)
+			renStr+=f'ren "{fileName}" "{fakeName}"\n'
 			encryptConfig['fileList'].append({
 				'fileName':fileName,
 				'fakeName':fakeName,
@@ -312,8 +323,8 @@ def beginEncryptFiles(file):
 		out.outC('正在生成混淆配置数据……','cyan','black',1)
 		configName=genSalt()
 		decryptConfigString=encryptEncryptConfig(password, encryptConfig, confuseHead, confuseTail)
-		writeFile('{}\\{}'.format(projOutputDir,configName),decryptConfigString)
-		writeFile('{}\\{}'.format(projOutputDir,'cfgname'),configName) #用python将文件名写入到临时文件中，以待后续合并使用。不能使用bat的echo，会输出空行
+		writeFile(f'{projOutputDir}\\{configName}',decryptConfigString)
+		writeFile(f'{projOutputDir}\\{projCfgname}',configName) #用python将文件名写入到临时文件中，以待后续合并使用。不能使用bat的echo，会输出空行
 		out.outlnC('[完成]','green','black',1)
 
 		# 复制执行文件到输出目录
@@ -326,10 +337,10 @@ def beginEncryptFiles(file):
 			targetFile=projOutputDir+'\\'+originFileName
 			copyfile(originFile, targetFile)
 			# 混淆exe并重命名
-			cpyStr ='@echo off\ncd "{projOutputDir}"\n'.format(**cmdParms)
-			cpyStr+='copy /b {}+{}+{} {}.exe>nul\n'.format(originFileName, configName, 'cfgname', genSalt())
-			cpyStr+='del cfgname>nul\n'
-			cpyStr+='del {}>nul\n'.format(originFileName)
+			cpyStr =f'@echo off\ncd "{projOutputDir}"\n'
+			cpyStr+=f'copy /b {originFileName}+{configName}+{projCfgname} {genSalt()}.exe>nul\n'
+			cpyStr+=f'del {projCfgname}>nul\n'
+			cpyStr+=f'del {originFileName}>nul\n'
 			runBat(cpyStr,'output\\')
 			out.outlnC('[完成]','green','black',1)
 
@@ -346,11 +357,16 @@ def beginDecryptFiles():
 	fileData=f.read()
 	f.close()
 	configName=fileData[-32:].decode('utf-8')
-	if not exist(configName):
-		out.outlnC('找不到解密配置文件！','black','red',1)
-		out.outlnC('如果需要加密压缩，请将文件或文件夹拖放到程序图标上！','cyan','black',1)
-		out.outln('按任意键退出。')
-		return 0
+	alreadyTiped=False
+	while True:
+		if not exist(configName):
+			if not alreadyTiped:
+				out.outlnC('找不到解密配置文件！','black','red',1)
+				out.outlnC('如果需要加密压缩，请将文件或文件夹拖放到程序图标上！','cyan','black',1)
+				alreadyTiped=True
+			configName=input('如果您知道配置文件名，请在此处输入：')
+		else:
+			break
 	
 	password=''
 	encryptConfig={}
@@ -367,7 +383,7 @@ def beginDecryptFiles():
 		# 解密配置数据
 		out.outC('正在解密配置数据……','cyan','black',1)
 		try:
-			encryptConfig=decryptEncryptConfig(password, loadFile('{}'.format(configName)))
+			encryptConfig=decryptEncryptConfig(password, loadFile(configName))
 			out.outlnC('[完成]','green','black',1)
 			break
 		except:
@@ -386,7 +402,7 @@ def beginDecryptFiles():
 	for fl in encryptConfig['fileList']:
 		fileName=fl['fileName']
 		fakeName=fl['fakeName']
-		renStr+='ren "{}" "{}"\n'.format(fakeName, fileName)
+		renStr+=f'ren "{fakeName}" "{fileName}"\n'
 		if fileName.split('.')[-1]=='001':
 			zFileName=fileName
 	runBat(renStr)
@@ -404,11 +420,7 @@ def beginDecryptFiles():
 
 	# 调用7Z进行加密压缩
 	out.outlnC('开始进行解压，这可能需要一定时间……','cyan','black',1)
-	cmdParms={
-		'encryptKey':encryptKey,
-		'fileName':zFileName,
-	}
-	cmdStr='@echo off\n"7z.exe" x -p{encryptKey} "{fileName}"'.format(**cmdParms)
+	cmdStr=f'@echo off\n"7z.exe" x -p{encryptKey} "{zFileName}"'
 	runBat(cmdStr)
 	out.outlnC('解压完成！','green','black',1)
 
@@ -419,11 +431,29 @@ def beginDecryptFiles():
 
 	out.outC('解压成功，请尽情使用吧！','black','green',1)
 	out.outlnC('','white','black',0)
+	print()
+	out.outC('按任意键清理压缩包，如果不需要，请关闭窗口！','cyan','black',1)
+	pause()
+	# 删除压缩包和解压配置（移入回收站）
+	if exist(configName):
+		try:
+			send2trash.send2trash(configName)
+		except:
+			pass
+	for fl in encryptConfig['fileList']:
+		fileName=fl['fileName']
+		try:
+			if exist(fileName):
+				send2trash.send2trash(fileName)
+		except:
+			pass
+	out.outC('[完成]','green','black',1)
+	out.outlnC('','white','black',0)
 
 def main():
 	os.system('cls')
 	if len(sys.argv)<2:
-		os.system('title 资源解密解压工具 v{} Build {}'.format(VERSION['versionUpdate'][0]['mainVersion'], VERSION['versionUpdate'][0]['dateVersion']))
+		os.system(f"title 资源解密解压工具 v{VERSION['versionUpdate'][0]['mainVersion']} Build {VERSION['versionUpdate'][0]['dateVersion']}")
 		out.outlnC('-=<欢迎使用资源解密解压工具！>=-','purple','black',1)
 		try:
 			beginDecryptFiles()
@@ -434,14 +464,14 @@ def main():
 		pause()
 		return 0
 	elif len(sys.argv)>2:
-		os.system('title 资源加密压缩工具 v{} Build {}'.format(VERSION['versionUpdate'][0]['mainVersion'], VERSION['versionUpdate'][0]['dateVersion']))
+		os.system(f"title 资源加密压缩工具 v{VERSION['versionUpdate'][0]['mainVersion']} Build {VERSION['versionUpdate'][0]['dateVersion']}")
 		out.outlnC('-=<欢迎使用资源加密压缩工具！>=-','purple','black',1)
 		out.outlnC('请只拖入一个文件或文件夹！','red','black',1)
 		out.outln('按任意键退出。')
 		pause()
 		return 0
 	else:
-		os.system('title 资源加密压缩工具 v{} Build {}'.format(VERSION['versionUpdate'][0]['mainVersion'], VERSION['versionUpdate'][0]['dateVersion']))
+		os.system(f"title 资源加密压缩工具 v{VERSION['versionUpdate'][0]['mainVersion']} Build {VERSION['versionUpdate'][0]['dateVersion']}")
 		out.outlnC('-=<欢迎使用资源加密压缩工具！>=-','purple','black',1)
 		out.outlnC('请在开始加密前，清空output文件夹，以免造成文件污染！','yellow','black',1)
 		try:
