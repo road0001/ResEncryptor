@@ -1,4 +1,4 @@
-DRQQTKLZRXrBFhRHXsmgTKkmp='DRQQTKLZRXrBFhRHXsmgTKkmpyI8ZnvwYEa97KO84UGSBSM8cx6B9ri6ROx42S4Yfbt87wH9Dw1LCmasS8OUaPRNk7Y0wb2T1zTvTtHx7K6dhpxKb1M9cR3LFC4iZsB6pGNzz6xQNnqoRBGkCnVBbF4ERu0slxxJMube8iKFM7vjm4FRNDtozhjlo7oW1kiGtlO2uR9Z7EAVlx22f7JiXKoSiPaKOxlXgm56G3vXqNjiT03YRlUcdNekGaH47PT8ThBUCYbrrbAC5wFp9J49RRessvCcYDQojZ8SRswGVjGB5mQ1sM57GVaTiZPofpH35EAPk0jyaGzsqCnaDzYqx7ZRWWZuIbSg4SlsDQ8ka9dDOe6lEeOKFhGs3dfau1BJnsCpFIHf3YIr8Q0SEPduUdVqlHmdbbQcZr5MpP27zaLvAyBxoKPbObhOCXk6sZD7Nvz0CtyFZ5UM3OWCpO8yLCkEODTLU7uebZK4CtgOvDPiZzFzIPNd8pGdUyHOLRkQscUD1ehCdDasydn36NvRc4sa1qo5VUDdLek6vJpuRh6RUzqQFPWDoMyYhWvMEK8GFveuSocx3INej979kAIU0ds2QzLXnViqUm2eisRlps3FaH6CGBGMN5GqPUZVwXp95ipI6hcfAfdpOiiHOpwQRDOyNGScEONsY82qf'
+RbHXRuDU39s5I='RbHXRuDU39s5IL4WzJEmC1QqjuH1ErFRHUY8jYuCJIlV0obWFBvRSNcu3ZTkoAGY1PjxO8KF3daE4lUnLHLnzKh6Xs10xdDnNNYZxrKhmGoklSQ9fe9JjjPV01c9117uxVGKHdSacXRnSHG7K4Z5paHObp2ppIQIAuExpZgcXa9SoIj1HOZE0vtTUZvd0E0CjOkcQTezLgrD1Shy6tNwrene5N88Y97Se9NCquKDE6RDtnBUHCdcAJT595yiSzKQStVTjUUcyHlbC7Skkpoc9pWDpW3CmFGKwk3AqpoAcNxkAw2CLRTwLa6yGO1H85mpWjxTOZIAEAYEJmBFT5cOk2vb9kohOUsVoRPNc3OsBCALrzfXZW4Ysz7T2rKu7pK3YVhqRj6PHEfXuarJFloi97n6VwNXuEJcP6FvlBteOeOYhHtgNDhwRjIYrtFasXUeQb80iQ0dsjtbO1y8uFyxofozgbjhxyejhajb1IoPkuqSugwRw34CcDqCbzJLB4mQO24IABvNfMXKSEFEW3anymScxTAQ2iO3PGn9Wx8QOOpjlAyzCZS8lQVvBdrBQcsupT4KlcnUMeT97ig2OZjGtyIkmK25k'
 
 import os
 import sys
@@ -18,11 +18,21 @@ import json
 import send2trash
 from shutil import copyfile
 
-Kz6IcjxHWqumRX9gIYwq='Kz6IcjxHWqumRX9gIYwqHRu1G7hBRjmMv4IIciM0YXRr58iJdBkuDY1Tp8HY4UL8mMe0T92Dj0dLXapG5oBgKJAnXikMxVEMoDDFdJROhREOSNNHfGOW3zGrWE7yPQloRaGAUEZh4rrHY0k45f59o7xvvLoSAU48F3rVIRMymv51HkQ22FuP39lJM6J6a7t2B0eQY6zxSfLTFITGa3j1DkPAPraXtOiIhaRR3HTupzK429PSaW1zE58IHtttVRlEeeFRD4f6QP1BAfPeucvBMAI83fpvKlxt3fgCp4YW85ILNihhv9QpM9jfo4ElPQk99oCrKyFTYGJ7YSJzcD9ZlH786pmdmO6G5nikmeU62gdEotpmKT6e9wzyGExPWd9NWx2WJVzmGpV6v1LHf0p3a1JFckTisE9hKcuxZNe0QHRwGbDwQpv3CeXgrJ4vHCsYoSupGgU9CHo1KaStBGJ6ej1rVhZXfilq5gcQQ9g11wS1jGVoapPBdfXdZEzjRNQTM0cqWvE2MBORFLYlG3bxXzHHzgqR9qX062pm4jGObYhgz9dRcEWbncMQZJoBjy2iSwI6PDvMJDoZssfYoDffqpFIUDLCCQZWk8DQWDOURYFjv6RfIZU5df1nvIa0DmzQYsR3lM60bLisF9dTvv6nTf5Yzf0Fzb7dMb1M1Uh1tTbpjCM32N3pH0lXTYUfBlKmf16SoVHSXYaMR9GoVXbnxz2mn0MGRzqym1xii1r4BuzN8qXufwlBVClaIZiWOeIR3HsrikJ7HuS2bkMI8TGP3GEctQpd4wzJSI4mqJZb9U7bsKQ5kqKkfS1Hf7GHlREO5FBDvUDd1Uk3a0YG9mp8o9kH8v0p2Brz5hjup1sOB5LtjpL1FwVOhlPd2zME7BQx59esQ6Oa9d6r3CFslAtwjj1nArnhh46qLIBFe4GKEn5MQ05cPG2OhUC3mxvy4cHH24z70KkSZ6YokjtP3adYR40MCLXF3fhqrY3ZqyvOo'
+bErAcchwMGpML='bErAcchwMGpMLjsQVnH4oU1mPb2nCEbVMhHgebEVChhsAcrbRKOwEcYPa1lhfYDFRfJJxFdvICjfUgnrOHFVs2o9eiGJE0cQESLXOHiIMKxu4ukzh02KRg0rEXmlDQUJVUZ8NkcrmwfFkAaEUbllgdZEHA3Am2uxg1EutKTybvEYv36GzwAd3Rq0BzRKRAmv5lqeIToFV9WeVcxKxzNGeIGTFb6X7SFMawYxpvQY0Zkuqz6iTy4L0M5KQ93D4TR0MqfsBc4nV5oUT82i50C0eUYnl1EXhrBORiPrxhWhaHLBBJdvSAtA5yp8vfc97c4g93s4sVY2KOuWpX9jk3pzpppMghAymv2crOJITe2cVEbH6Rq2CaNxDWFsNP8NnAsqOIDoDiKqjopIRXiRH54lr9rf7gqv2ZLPrvU9WcNOHNX7vpAQRGOCZ3IKT8RmqLEhERNxc8Xrc4jYOBGgHNLrCi3xJ67R6vthV5iI4dgf8kdb3VWZ6K2atrjIP85pnn452lji2Sf4DjrXbXWuAex'
 
 VERSION={
 "appName":"ResEncryptor",
 "versionUpdate":[
+{
+	"mainVersion":"1.0.6",
+	"dateVersion":"20230620",
+	"versionDesc":[
+		"更换混淆数据。",
+		"将重命名功能改为Python内置库。",
+		"调整混淆文件头的数据长度阈值。",
+		"加入解密配置重复迭代功能，以对抗暴力破解。",
+	""]
+},
 {
 	"mainVersion":"1.0.5",
 	"dateVersion":"20230619",
@@ -79,7 +89,7 @@ VERSION={
 ]
 }
 
-CBEQnqeYpMnlS8='CBEQnqeYpMnlS8WDDcFj89QGoUpmfKtRnA33GWWekucQRUmnqN2U4eoyXCwVpIxIlCbhkmuQNqpBzXXPzNLdCqmFvWWRI2meY5uLwgpk6QEvHK28Ws7AJUEu8Oos7kWTywuOhXSnDcyXDKhMEibTYKrfRvNksHocjY2Yfw9U9gYp0HykqVEYfFioXNIRZ7aGqaDi9Qh7Twt5OfGxDH0OHPr9SOPDjv3Y6WBql9jmXz2W2khuTgzXJq82IsGVTbPDtmuyogoQQDrLzsn8ZjCY8C9I5vx2w1Q2zkWcktIa0BxpYFXzHowiOGnpSJpee1PhcFlFM9vl1gbT8nlkHOR1d5AgqRnB7GHs1P20jlFw5OfccbAhGiLi4C0HdNzUfogl8pPbgl2kujffP1uCJhgC6JtdCVmy5eMDYzAgxsAIew1CNlL6KVWRS7MBj7hFH7gj8ff0AxFPukyCjq4wfn7v8AhOhNGXWwcocfpb2znaJrI0sad5rV1kxq2r48k6lpfyUYX6gIS6pI71ruF4Va676n2TomI10CbrZ2vJnViDfgk5tdfNMPhU5ZTT0hr3xESkdbIUXUkQpsgs2vsTC09At1OqNwyryZAUIu2kbAzSYDAhNN7jKuCE62sFNKqg43xeCSMvIWQFNttl3h22nPaeNyuFjUsNL7QlFvc1NVDA4yHRbGQ9aGRelvg1yi7ilgtp8b66Y7ylVydA1XvmwWcyrJaN9wrb5BPqc0c5CujajawxSXJGiCHvWbiwnrvUyhgyzvBa9Pv44pWNbDcvJBBPdun67pKuYT3Dk1s4OmPxKQ3V6Bj3r0vCYkdkkRnWmxiYqAdSOMLZLhfO4NcLJ6z07g4e9on7D7Cggps56DcHX7aU20sWthajvfe3vyS1ySdyyhbgzoIKfMEj0GZ4uk07ceHQxCqQaJPJH3fTvsWJH'
+w4GP5nFbnfyLNEhRuWbGco='w4GP5nFbnfyLNEhRuWbGco91I4I0EjktkpyiYO5E2kpoz5Z8nJvPTnhbqSEqxsSknY3SO1luEZLRpyTUex9W8WEZC6XZXMUYS4IQyqGbUM6MGMo97BRU3LRYlCWoqTgaTVLw0ZPwYttAnDQsmg4J84Hw9l7QEHE83hwxTInfKaLVOuXsnUBR64XVJG1UkyXaK2Tg6ea6H67dQHD9ltloEONUq9EOlwQQ1EXE22blvPD2NuJI2pix76eVzYSqjisdKS0dH89HLTwtpbo6AhdpCWTMOWEbwhKZDY1CoQI9ZARjGMNx8LMcrFRl6ikDVJrwHsu2Bhuj8Qv5bf9LT2koV2fEwWgvtgF7Hll4aqFnw5fYwjhfb2bHJOnZFY3BaFBF8wupQuTUqvVLCOqpEaQaxwWaIz2rFttQqKCWFxz4VToPZwQpYH7hVYUoZo7D2HA9f6f1OSudIe0aiapwXrM9zOnHW3vTAcxNmbKXG1eJvw8EoeIIpHpBskQot5WBPYZFdGeJsBnbWWLo0SZNpt6hsdZERN3pawwoYb28nDLUJq9vDgXo7KRLzyq3tDeTuwVpBmqt4Zg83tmLvuZn3lg9krB9RPIPqlAa0hZZwFTlLM3d0lc9xyBbvDcxSYGSi8Ejxziln8sxaruGdUo0VssG1q7v72ou6zVeEkVRLxAweGxCayQWQucGO3ToBWyVCuBEGsVjyeqhxKy3tCN8GhH1xSQNwOEe8cpaEujiw8UxFHzY499sx1AsxQhXfvKLu2PvSv9Fb2s0rIy'
 
 '''
 Configs
@@ -91,9 +101,14 @@ volumeRange=[20,50,1024]
 # 默认盐，和配置文件加解密有关，不可随便更换，否则不兼容其他版本
 defaultSalt='KnWn7ZYSa309KyYnruB0JXF9zIRAsQNx'
 # 随机文件头长度范围
-randomHeadLengthRange=[128,1024]
+randomHeadLengthRange=[1024,2048]
+# 解密配置数据重复加密迭代次数
+# 最大不允许超过25次，每次迭代增加1/3大小
+encryptConfigRepeatCount=[20,20]
+# 混淆数据长度范围
+confuseLength=[4096,8192]
 
-lON7I42xI78GZHmKGF='lON7I42xI78GZHmKGFGH2xLHJ7stdKPrOSy8hQobDQYFMOBA2nuGJI9OrJnTWltvfIe61Md6BnHc5sbYzvFHL9MavRxKzsjEfvaDSuveIQBkY9vmPBMOwFYbzOCmhsJr2hzOGQRAp3299Vg6irXzpJpki941w2VDXEXjvVVL3Yj3wvHZMTX4K4L1gcgiqx7OPBZGHCOTy3SzJdhYcdy3EyC4nUHrxfEhWC2LiUlTwPM1MwEEVxdrwnHdXrUrS3KVVFNTF9OZfaAzGqHB3tcWZk3AKfe2SOAMdCw71yPHKWKgahSCNXnDM5lQDtMrPvX9tom5j3UwMIYdZDlEI7qKdC8ZQ5a2aNtEB3XMju3524eakSqCmOQBx59FFprrAl4eUE2tFDr72iQpy5qiAPbgueT2XMqukWF86ssuOHfVYPzrc8ZM6t6ltzPtSTvOW3VYDOF4PGPwdPGNEKHRQrIohyYwUtio2dmz1Hva8fdDGSmD0ss2FJeCQIE13XMuwycGmANShEMzL46xfyD05Avm59hQCJPfvorZRFGh6cPtXZ8mMUphaXfjhFRJtQMRlD4NSN42Sw'
+cI2QONfwxiP3LDTPPO3B9WSRg='cI2QONfwxiP3LDTPPO3B9WSRgbmcQEBATwF8IlUwSct1oK2iVWqDzxO9EtMmw0NqbBK4HeenWNMwQ8o6M86MTRnYi4oqp8DKeszZQkWZvJiLZt2sPYKWPUF6po5AmHe3Ka5IMoS7gSmldPBgB2nHgLX2cE3B9qdwfYqzMMtue7BDuUfoXanxsRt0nAwh4QejG24drcz2TsY87Qrqf03uIMysa92YwSke2DV4sMVnTMZKlF06iW0iriWMw0wgbxT1aWsFkAGDjugYNwlfRAx37mx9ObBLB44Q7ta3qQpNDhqvhFhtuEIlFd0CiLtFN8MMKyVs94PVwhStLoMgDPyVERDVDmxiPGfGq7DL5ibgWYLW92ZEviHVjm2emn3hUV0MJRttZmF1qGcS1hcaSZBPlEnb3fDFTeE76BVMZKtsSCPsq5D8D7XirA96p5UwkmDpWWx6FPucWgBKYANOq5wAF4RhvipoTKlqX454S6CHMuaqETNIpE7eqzAu2lv0snysQ1ejGDBY04qzTFtdX5FHTHmJdMf1MUS0VD0YfGPKripJ64jf9LMBuwF1uMMaafl23omWIp9IMJP6GVvAK5lj8AJH3U50qFaf3cq7IKq8yuXKQtoxdF3zI0J5P11iNljWvVnF5oTEU1oodNqscCqS55R5MWSuXfSRsC'
 
 '''
 Utils
@@ -198,7 +213,7 @@ def genCapsList(length):
 			capsList.append(i)
 	return capsList
 
-O4HGqNt4CIp4c7Ok2bb='O4HGqNt4CIp4c7Ok2bbXAHAJl34WZOhRO5DnckxZUzF6HYhXU9K7clRLkUdLGAyhvMBrJySc59Ou254GdjQHsS9FK8FB8onyfcj2RHtFPtDmUaC4dsdZsQgS8tbDGmRto8ja853Eku8DT4KhC0ytDOmgOQPkgwfZBRtptVQGT7M9sDR6ut8xeaXt8jzZS6zsodgAxc2gMypQaZOB5gDQxUpkzMoNI9mIfJwMa3xZwJ3HlzSWqG6jqYNDiefCkSahs5LA4VTE2KyExkYUdNzB7i3KMPfWC6JzJwvtzaikifxUxjEXdRQNsovIjOh5u2Rt9TGmD7dLDYgmetgguvU2Xs9JKtRgmSc4bRHSit5Q078xS1QKf1k1eAvuV28b3rlFB2iz1WdwhNOjC5B6dMHYfrvfxD0sKkBXjEIj0LqEDUC4mmhlDOobTz5x3kbQ1gGqMMERh5HPl2Fe65dRUQ6gGmmfGBtfjODuOLa8hjedJFH9mwHxnzOn9kxN8whImAiOve9WU37FEMoxWS0tAfEcRarSzOcbVilr9r1wAegZboBPT9uUGMEXSNvxkSwXC6eV9x7rZ7lJZIj4v9q2QwGLvzRlsf42rlqGJYZ63UbNxCX8zZQNAa1rwn0bwkTv5Pg728vN2uM4RROrBRgQVFYButAyy1fEtcpiDlM1wxYaFpernu8XbdiZi'
+ZtgwI1uLBvV0zyw='ZtgwI1uLBvV0zywmwYhAs0Hs2tiLoetUSSbZHraaL3hIuNY4YW99XRiPk0gx2m2MQJhDWFfo0T2ScTJZLsmH8q0DV2xl5bZj0f5UhEL6dioxyxTLVDZ0VIyGBO60P089bKB5vB7OTHF5mHcUDTzA3OM97RP2ywDJdnfGO4Icnthftyl1zlDBIzZry8CT0lxGz0ndfQbaB6GSDBsVZRMkk0zTxU6o1S84SOgO4ksVIvvdhMWUMitwqgFEEJNAlxQhND1HgoJyrDZzASDtHDd998jHncVuDcsQB6CkZZs6pTWRaUeY66Y5hWC9ytWZJXwTGVdsaxP2zEsJYiY3BKeIAodD0i3TlCWTAWt4qz3WITFZgygHH5jWONfxv4onApCiy5ge7KXOi6HDdViNikrsYSJUa4ureNtwIeUbGfhEK3ad0ekxglcoZuWUd1qGDbGl20KyIHMgOeVvCXyTAK9BcvUYNlPZHH3y2PSHJbl99TseesIbOeXM32M9vzmDKhCVv4xtFJRwzdTcopTiNMMzqiDkY3CVdz8qUBZDCfX82FSK8vsgmQbddvAxf6i08s62Ztu0MUSjEj2V15tj8YAPjLggu8Fr9ZsMq5XKWuPeiiWYqogVGjXmQATXXNQgW4zHN3JoyyKRkgYoVhzLMSVJM2HKfDI7G64jQSmO8SufpDYx8oE5sL6ZC2Iam'
 
 '''
 AES加密
@@ -218,7 +233,7 @@ def AES_Decrypt(password, data):
 	# return obj.decrypt(base64.b64decode(data))
 	return obj.decrypt(data)
 
-SMW4vkszziN3WCavnS85='SMW4vkszziN3WCavnS85RgCKbeu1eSXdzyXnHp2xIst4rqEvD9x0EC7Qio7zqV8KB9Hk1AZOJpSpe7bowz0kEKGfxQlvM5UHw1nHSjfATWuh1lge1fgyDRZcBfYYg52lMJkW47CaSlCdJI2sRej3iQ8lVYDDAHFW2NgQ3FlQa9Kl95GZ02mLI3gq5WmyS5avqCvIhvZoFq0axSgnfr7bPWlM3SzI7tTW0CUF7iQ1KwTm9JuR9Y3W8SYudTppHDc19W8QFtGNB6gwTg48nyjxBpbtfDqXH4YBLNxJCXRYUdcFEQI3P0WKRnLfS9pLhsL4otSf7vhwGPGPEBHeU3k82F9qRX6qS2FqxriWDOCLxHn4JpFGYZSORUu9o5PMgoCoxqE37nqOLa7EL67RBBka3PWTIT3wW21XsJcVRkCIZJmrXv5mP973obpOXqlKSljP2dUcy6fmPAeroViWsQ8CepIA2zoiw88M1sNsoiYIWnZ3NN5RySSypVa1pTEvmo5TuURxSFLgUC3Nf6w3eozITEbc0cajn64PcvYcZEHYwju5Cqk1iNr0v1QuT1fTnAvwVGfKUevNgM0RLZsLkRnCgWhLNjUimTgdoJS6OBMIVED3bxcao9z2J1SvPiLAjn0Vn3zyi7QS2vTN3NPXXyCH2tamwvkiyKLvngTXhG2hpDTGLEevdV74iuKUNW9PoIOtFPK1E2R1r31su14N9frRRWx81yeVvDL0saKSKUkSo7hRmvnHDZgCnXZFkkUHhd8rNToStDxNj3cQkjEvmyFCYv50jGP8jPQEzh96h6GQSBmGlH7ULqs1rX4w4zj410a9i9rstyTY6CMD9p2UjtL2bBkQ9lc8ZPNYx9xDPN6cedyHa6w21WgJ42O9EIdVmqhA4dJw3VjKPkrBpQHDJNFyp5UmI74KuRur1GdfHYg7teYK1uUno2J88t3tX9YlrfqmS5z2cgOTaD5so'
+fARnc9DTA7tfUh='fARnc9DTA7tfUhvjeCH98p6QpHBlsdS9qnKwFOL2lcjRypU9DBvhFmH0FZRnXb0nFzPjw8yIh8qF14l3qHTYVvlNOPQMqoipEtQyOLbmYlgJTaMVX3ZjBAlB0v2BpuA77g1A5d3BSP7Alq1MQXamKTKy9NYXdYOxWyD2NhUQPCxfaFEf4OKVgtr4k5LEd2zDTAWVHX5ZTZkH7Cn7bITFb5tvmcSQFsexjULN4RiC7LHAw1SQ0jFtPybYexjn2GgzbJQ7k1koZyZbFbOpGNpiURVr7UlEz45cILp0mtWj4S502oSR66TG7X1pc4AQvwvnZ8jWaQOu5mhLQZPJQrfz9V69p1EIqRtiuDUz5l0cRObTxFQb2TSlp3ul753xZZZ1vBcAJA8Ra6rXYdzv0VFBeCkMoD6eWJOOIGKUcwKRW83foIP4wm2mfV0tJlpmKKTMLOSdg4jqVUVnyONnit19K5ET3NhKgRof4J2CklfN5Rcs9TMeIvPLM4djItHL0AaJowOkfdngmJyDrbmKxmHqPGsHYKVZnnnQ5wZQJHROcBoZ2XrI8nEEkGgvemXAb1OCoGSSPW8OU1Msx16EqdJDJweZi6IkUCSYZ5C32WCc3XDdMeIfCBVy6lFEu3PFz0lZJ6r2IpZqh4fAZOctWxG3Q1xpk'
 
 '''
 App
@@ -272,16 +287,41 @@ def genEncryptConfig(chead, ctail, desc):
 def encryptEncryptConfig(password,config,chead,ctail):
 	# return base64.b64encode('{}\b{}\b{}'.format(chead,json.dumps(config,ensure_ascii=False),ctail).encode(encoding='utf-8')).decode('UTF-8')
 	# return AES_Encrypt(password,f'{chead}\b{json.dumps(config,ensure_ascii=False)}\b{ctail}').decode('UTF-8')
-	return AES_Encrypt(password,f'{chead}\b{json.dumps(config,ensure_ascii=False)}\b{ctail}')
+	# return AES_Encrypt(password,f'{chead}\b{json.dumps(config,ensure_ascii=False)}\b{ctail}')
+	
+	# 使用多次加密迭代，增加解密时间成本，抗暴力破解
+	encryptCount=random.randint(encryptConfigRepeatCount[0], encryptConfigRepeatCount[1])
+	encConfigStr=f'{chead}\b{json.dumps(config,ensure_ascii=False)}\b{ctail}'
+	for i in range(0,encryptCount-1):
+		encConfigStr=base64.b64encode(AES_Encrypt(password,encConfigStr)).decode('UTF-8')
+	encConfigStr=AES_Encrypt(password,encConfigStr)
+
+	return encConfigStr
 '''
 解密配置数据
 参数：已加密的配置数据
 '''
 def decryptEncryptConfig(password,data):
+	# decData=AES_Decrypt(password,data)
+	# # config=base64.b64decode(data).decode(encoding='utf-8').split('\b')[1]
+	# config=decData.decode(encoding='utf-8').split('\b')[1]
+	# return json.loads(config)
+	
+	# 使用多次加密迭代，增加解密时间成本，抗暴力破解
 	decData=AES_Decrypt(password,data)
-	# config=base64.b64decode(data).decode(encoding='utf-8').split('\b')[1]
-	config=decData.decode(encoding='utf-8').split('\b')[1]
-	return json.loads(config)
+	for i in range(0, encryptConfigRepeatCount[1]):
+		decData=AES_Decrypt(password,base64.b64decode(decData))
+		try:
+			decSplit=decData.decode(encoding='utf-8').split('\b')
+			if len(decSplit)==3:
+				config=decSplit[1]
+				try:
+					return json.loads(config)
+				except:
+					pass
+		except:
+			pass
+	return False
 '''
 根据配置计算压缩包密钥
 参数：密码，配置数据
@@ -313,7 +353,7 @@ def makeOutputDir(addr):
 		os.makedirs(dirs)
 	return dirs
 
-aNcWc0lbrlDfFAaFlzwA='aNcWc0lbrlDfFAaFlzwAIqpfmUfR6sJIP1FK3nHYfXkpzvTqUdo5k9eXAj6lGxCR3wWDF5FFMn1m6XwGFNKEZwuswbY83gP3RGYITLDgsQDvgFvxoaJ0qis1P5hzNRmx1LrXb1yuUrh5fYcomH0BE9KgBeiRSivhQMUHoe4WXaLQiwIcjXDj2aB46CurGBt4wXnYuQwCAUXg4Ni4RF7hlsiaxP6ZDAj7GbMQR0HHowgdUi5RMFpBQoSIeOu8IE6cCv99j1D8U1jxpez23qAHmNIU4crhgJM7UUSL6KmrhxQrgp6zHT0kLp0eZj6151smLDPTphlak14BhDjoLZNYztcThYDUJZ5G74ANl8cFaItwV8zH8cjwu2BdU5ZM5Tar5ENpNAa1c00u8hBtQEJWgBrO2sgqiQLaFczeBTt2jieuNGPyhGaX4GY6XLp1pJm1AtsWkf8TeSDKgdPWi8iPugYFa4p2wm8a70qk64x4B7ZK0Uz7wthSpaxSTkkprVSyvP2CThGaRxwXqsxXrwmpa9z7uIMlSvviiQlbdMdQgWyQewfXj84wSx3wr3WRUahez6KYSKnbDxKkdE17pnKjbxZaSpb0AUE9WjN5qcSyuoHgTJ3usFhzpecOQ5tbRZROGmIbFNTgLR5fohV1JvcS15LNR3lPQQnLaGvDiqyv8CL9nInw2LxN2n22hzIv45CBO2QR2fM0xAnltHTqmAj8sKRRaCllangSOzvIiL3CBy1jmYxLmafF9RSy0dLJUbKC76UVzf81waNPIVSKCXDzcijHWkUqRgynlH0YOqoJmTr1JGwwDfYnM8iYFjEP9AgsuULiKrOs33xYPQz7wrPJ7uVnkBe0lo9Oo63MLe5qIEoW1XONgsjfgaJtLqjnBijgBsWMqfU3mzZjFBPKsltjlh9IwhwQLQWLUNvM0'
+iITvQXJA3i985K='iITvQXJA3i985KfKzKgWvehHUekZnw0XxRTFsCdPIPvW6HRUFtXkKssoPExGztnwXGK4xVpRqVn2lfKbUycndC0aUNZ7TSh8OnkTlZNCoNUCms4aNaAnGBYj6oPhY35pARUZnQYN5pdR0J7RY0EwsVw04rznHTShdmX7QLoXmtXf7ysRRthx0nBkS9LSon94q4JLUSYVqhhmVg37QRfaHNCHLath6uhlfEEUZyZODCXCi0zLMLQCkNmUMtHPQCUSPSIXzYkfFVZNWkLZPiHJUTLuaEMm8xGJcno5PfuJD10eG1aLgmoo6gLN6YJKWUvVtDneCEYnsrs1l1ysDnElXkyrPboNNmNYLWoIL2iAGucOieNRQV6RSi8BPMgJKLfmnirFeRfgOrmD5v2r1IHOaqZJXNhXbYRK4DfcIp96cs5Nr5xq1C17APMs6tRhRcLTJEfxj5mbzxyJDGO9WwukN9QOPUWzmWPZc4KOpkFuMPHUbd9aTYEyy6lInsJEed7yOXNaXD9c8xIVoSj0r9kRC7wJ6EFdzl6q5JbbOsy20TeMQQukQoCDOgEBORuMasVkoU9CDnT53VWEswKfpmFosmyocKmqJ9bMAOSGZPQRFhW8ElwqBkRJjEaq1KWzpJuFCKPb8gYjvrkHJlTG0Ei1FQVwR6qGAOha8lXphtWpn9dMEAbo1qeQSW8qcmbWMsQ269zvPDm7JvYfjjFfTHvepj0kfL9fu4t0Pe9JYibbxd1vcINeji8oro2YnujrHw61vWTojMEJaj8WzUhz2HRVMh6jI8bo6kWiKkMlJFBhhLGHAcht2OpcS3cnUld4YdBQH1e7wIjN6QQO5ZTR5XX9ZaYhMdKMCkAX1JTOGNcsQtMaUXysSr77W2WdHOYDG7oSHalIyKnVwUT3xGNXeQt2XbwDi'
 
 def beginEncryptFiles(file):
 	applyFileData(file)
@@ -333,8 +373,8 @@ def beginEncryptFiles(file):
 
 		# 生成混淆头尾和配置数据
 		out.outC('正在生成混淆数据……','cyan','black',1)
-		confuseHead=base64.b64encode(randomBin(random.randint(512,1024))).decode('UTF-8')
-		confuseTail=base64.b64encode(randomBin(random.randint(512,1024))).decode('UTF-8')
+		confuseHead=base64.b64encode(randomBin(random.randint(confuseLength[0],confuseLength[1]))).decode('UTF-8')
+		confuseTail=base64.b64encode(randomBin(random.randint(confuseLength[0],confuseLength[1]))).decode('UTF-8')
 		encryptConfig=genEncryptConfig(confuseHead, confuseTail, desc)
 		out.outlnC('[完成]','green','black',1)
 
@@ -390,16 +430,24 @@ def beginEncryptFiles(file):
 
 		# 对文件进行乱序重命名
 		out.outC('正在重命名文件……','cyan','black',1)
-		renStr=f'@echo off\ncd {projOutputDir}\n'
 		for fp in getAllFileList(projOutputDir):
 			fileName=fp.split('\\')[-1]
 			fakeName=genSalt()
-			renStr+=f'ren "{fileName}" "{fakeName}"\n'
 			encryptConfig['fileList'].append({
 				'fileName':fileName,
 				'fakeName':fakeName,
 			})
-		runBat(renStr,'output\\')
+			os.rename(f'{projOutputDir}\\{fileName}',f'{projOutputDir}\\{fakeName}')
+		# renStr=f'@echo off\ncd {projOutputDir}\n'
+		# for fp in getAllFileList(projOutputDir):
+		# 	fileName=fp.split('\\')[-1]
+		# 	fakeName=genSalt()
+		# 	renStr+=f'ren "{fileName}" "{fakeName}"\n'
+		# 	encryptConfig['fileList'].append({
+		# 		'fileName':fileName,
+		# 		'fakeName':fakeName,
+		# 	})
+		# runBat(renStr,'output\\')
 		out.outlnC('[完成]','green','black',1)
 
 		# 生成混淆后的配置数据
@@ -467,8 +515,11 @@ def beginDecryptFiles():
 		out.outC('正在解密配置数据……','cyan','black',1)
 		try:
 			encryptConfig=decryptEncryptConfig(password, loadFile(configName,'rb'))
-			out.outlnC('[完成]','green','black',1)
-			break
+			if encryptConfig!=False:
+				out.outlnC('[完成]','green','black',1)
+				break
+			else:
+				out.outlnC('[解密失败！密码错误？]','red','black',1)
 		except:
 			out.outlnC('[解密失败！密码错误？]','red','black',1)
 	
@@ -481,31 +532,37 @@ def beginDecryptFiles():
 	# 对文件进行乱序重命名
 	out.outC('正在重命名文件……','cyan','black',1)
 	zFileName=''
-	renStr='@echo off\n'
 	for fl in encryptConfig['fileList']:
 		fileName=fl['fileName']
 		fakeName=fl['fakeName']
-		renStr+=f'ren "{fakeName}" "{fileName}"\n'
 		if fileName.split('.')[-1]=='001':
 			zFileName=fileName
-	runBat(renStr)
+		os.rename(fakeName,fileName)
+	# renStr='@echo off\n'
+	# for fl in encryptConfig['fileList']:
+	# 	fileName=fl['fileName']
+	# 	fakeName=fl['fakeName']
+	# 	renStr+=f'ren "{fakeName}" "{fileName}"\n'
+	# 	if fileName.split('.')[-1]=='001':
+	# 		zFileName=fileName
+	# runBat(renStr)
 	out.outlnC('[完成]','green','black',1)
 
 	# 进行7z文件解混淆
-	if 'originHead' in encryptConfig: # 向下兼容没有原始头的配置数据
-		out.outC('正在解混淆文件头……','cyan','black',1)
-		firstFileName=zFileName
-		firstFileNameTmp=f'{firstFileName}.tmp'
-		originHead=base64.b64decode(encryptConfig['originHead'])
-		with open(firstFileName,'rb') as targetFile, open(f'{firstFileNameTmp}','wb') as originFile:
-			targetData=targetFile.read()
-			originFile.write(targetData)
-			originFile.seek(0x00)
-			originFile.write(originHead)
-			originFile.flush()
-		os.remove(firstFileName)
-		os.rename(f'{firstFileNameTmp}',firstFileName)
-		out.outlnC('[完成]','green','black',1)
+	out.outC('正在解混淆文件头……','cyan','black',1)
+	firstFileName=zFileName
+	firstFileNameTmp=f'{firstFileName}.tmp'
+	originHead=base64.b64decode(encryptConfig['originHead'])
+	with open(firstFileName,'rb') as targetFile, open(f'{firstFileNameTmp}','wb') as originFile:
+		targetData=targetFile.read()
+		originFile.write(targetData)
+		originFile.seek(0x00)
+		originFile.write(originHead)
+		originFile.flush()
+	os.remove(firstFileName)
+	os.rename(f'{firstFileNameTmp}',firstFileName)
+	out.outlnC('[完成]','green','black',1)
+		
 
 	# 生成解密KEY
 	out.outC('正在生成解密密钥……','cyan','black',1)
@@ -549,7 +606,7 @@ def beginDecryptFiles():
 	out.outC('[完成]','green','black',1)
 	out.outlnC('','white','black',0)
 
-TvmD5ym0xWu4Gqa='TvmD5ym0xWu4GqaBJ2LCBZSr9a4AvKtwAS9ScLO7fLFQtpo8QFqg846o1rQOtmRlAvMrTNYnaoXiG8CRN6l8zADiE79KJfmLuDO289OchjzPeqEfJ6BDPn3vkb6L8n1rLwggBXakXkWYyLayindkx3MMYAErDZNJ54uDQlM1Xs7ter0hOt2v8m6VrB1VeOLr8EszttiyG78TFJCtVFVLjlym3VHz8h9UiPTZorD1wdJJLFkYOmu9WHL7szUgXAVHQKi6CsC8AmJTF5wTVbdqj88VHCXJBEqWbGBOw7dL5wLbcKW9C2owlPSd8lUctQv8d6Z5qdZ0VuxXEyjaQAIjVTNrL018AAf7vIvvjbvtQfmckEfvTiieNuPiM1qTkFwUVMMr7kKwOQM97W8KrBSjcAb8UC1CYE7dfrRKLZDzFmsQetWRrurt6GvsZogkQSlgK2kOtmAY6CaEoeYFYbciE6xDKA3zqDvJ0IwKI54rdCif59cEX7Zr4JVCUOQ5nDFjFBbWqVtpZdhMSgqMIO2PO1JQXeIKjY2c4Ye36SRhQAK97CyXyGpt7xsvuzVIgbFmMCs9hiRqmlechmXgfcabhMXKo626p9l3TvcWycVBCvjTsrwebn4oLJPSoInKa1HSYvBBXLkRREGgivMyUmnTacBqcXJ4uK9UVYZfiwBSp9lSOjkG9IwZA6zOp8mNGqZAf2KDCEDQcFJfeQR0pziGxyAEO0fQ4Wl9DTN4NCMnCL3u9c3YxNiC1dpSsQSkoChVuTtCZHSFs2G407DLRi2i1kYYpQflViYCMn7FYrPUPM9HqtqIQdLJr4GVlYmjVhvexTV1kyJSDnW5FIcnX9p9mN2I9Ype2edpYabjX8397akheuter4bgwSUSF1Okeuy0cJsL67kGWgDMVy2RBXDRSqxBDkvWORjexqbhiPcvQHfLx5bC6PEkuckkbERcDenyACU'
+XJN9j9cHRrlM3='XJN9j9cHRrlM3tVGkukbleFrVg6lHC0k1mDZHFHZRfu1eu1thI0hw9zOkMrKyeo9Jyc41c2CfxXYVzSAvToaTtnUVfZ80nPOkrE17N1y5k4XJI6sT13P0UxCpGymlvogqWeKCedfLjTpi5spS2PGmviQ78nmWFu5tjKqbYhfAsghoMUSy7cvsLuwy6RLEPahi4p5f1ZnAWBfj8YfuEFaBRIcnq0I6Cu8258HAEQuwYBIQCGHlXAio84o6mIHOravxyjRvfNNKK6eEDx0n5hJFn536Wws2INfkppf3wFi0lBSctALF5WkR36eexfLki7PGY8W9uIN4X9wLrWPLvhI7nAltlJi9U4GEY9KvVMxwHQ0Hdb65BsnIZyGf06OG3R9denJymOAAlLZAD3NQKg0ccVkhkUaSZ8WqP78XHRkoMRhfBLfqnSNcfzkSjTNQSS2936rcZsXBFRntYBROur2ymE4kUQXJ46zirvLc4IJJXcw8KSDwvcdHGmuDh9caBllWTCHdvTZdf4nrfjHtTSsIK1q6Hsh4GCAvG40zM1Ue8sok4I2LqNtaOoR988R14ZWgygafsaF2Nef72wOKJBbNmaHNzxd3fl9e31QRMl2s22hmWrLZh7ILKtCkwgv4c6xQpfnpUbUBLTQkrsS8vxAdEIFd335PjbW43nz1pExvR65eEefQvof0cbGSegN7AbFoWgtYQjs2xN0XHl6Y3KeviIyPoI8jpwFQnsc66ztW5UNbmvmWmJHXzFnld7KhZJnlcbVJIAwES6rbqIAnrglvxCNwjp1N0WTGxllZ'
 
 def main():
 	os.system('cls')
@@ -587,9 +644,9 @@ def main():
 		pause()
 		return 0
 
-eXvx5FYG4x441BQ='8eXvx5FYG4x441BQyVElhxwNZ9q2KcW0pCa7kgcDozrVrKmAeI6JknKUVams8SWJkbNRnPvLe4lIRNh7gBf5zM9BQfyLv78RANPnFxUn573M25a2k48A0DHF9QA9xMkvS6TxuZSyT18H8MpOGZhPe4eugKy73SYUCauGOGjp8SSsnmYZvAwAhsUXk15CJWAiesIcLcJZnqcn7YL5ubv4nHaIpuo6mPBhK0jtsNzz7Volyc1lDcSi6FfT6pJ5MojrJdHvvAVtduffk8KkN6T3r3O67wyIpW0dAUMve3LK9sEApphoRHdrBRFJq04onSN46PKIYvih6Z6yF6GLG31DFLRDK5LGvnTnuINv6NjBKjUkdnspP8Onp7G66g8Ei2cMR75V0zbNnFJL4l6iP5pcbEWMWvlrfUCPjwHHTd5OZDwQGRjOM9dOzF9TTKg4QGEe0Gz6NZc7JeiJNu7C0dq79jCmI24WtHJfO5fU6XOTEHPO8MXNR0ufDQ8EzfmDXEajhc9KXbSO8YAVv0WWdZwDKFceEkC9QqXlSybPA4PLauRw2xCInXsi4M0IERWi02DV2RzbX9j1lcTAfnimIPY1JXJfjQ0J1SMfwrUwQV7tbOQ8In2g9H4NzK7eppDk1PnJ1rE7HuFj6nErqUqJ5pkVJGTs5sJ0dAbcLenLFKFeLQ71NR2LB9FQgO3jmFH224gywjOd3qkB0doN7D4K9X5nx9Fq1AEsT7IMLwz5fFdh8S1VykVWKY2OYKsRFWZjkdgHWfIpmrFu0C4FZBWpIxbcPeMpMLegRUJNwLPujYMoWvCyqUJ8Hw1k6uE9CNRzuG9VeLKilLzBeUg6fXDmESrVOhIvkkhDWh7icAkLyKykrH7X8obfgoooTZX45iDWIbDu4tHjdYmXKzBV4gxOyxDdwlm9hTQLmnGGSNTLTqTDEbJFMF7Ha8dbkEUVw3u94'
+PmajalGmEOq5fM3='PmajalGmEOq5fM3mzT61Icd0BA1jT4vYVROOooyUzskSY5xTZesWvcSOF7CGWZO4uWPD7lbIbTbxh1Vb9iTD51aTQjlVc5u4GEvoq7BkRNroClENXjlYPlWhZeEc9ZejdIdz4oH875qup8Nf6cYdTFdsqRRaJt5WWqhS5gZLE9i2AeRtW9EKh6CRqEigK8PYtQgRiywcv3nURpuWsHsJEItpcdJ3OVjHlis4TOPPAQ7OJZKOTayupnIYXQU2rwT6ixefzs8PTtzvVq7FZtKoHKfOSwCSk7BgaEERWOdS3K2gTOykGnVvY5wc3MGrx7e83EBXVL7mvx9pslnbFS6Atn0SZxYyRNmJwXyEN1uz4PEC9hTC4R7xEeJiytHRCihVnc2ldNFD87lx84QITfkslJvbiuLQ1c4Kb3gQ5BvvinFAB9WlHL1mBFX1YfFBpBqqi6d7KNiZSneZ9zc3iG2atuPbpuduFbbU3bhuLNPsPHsjLNrR44NCNYzs9gUPyCq7CEPEZoUjURPGvDgEoVHJnmwlhpUKBVMVLKosi8IfAG2My0ZS37kzP8W2FwDdwl4vJjxpLpcdKP0cSFabowRw4IiJGj3bMj3vMNOSZqvILsrDi253zbbUkIiqQCCgeIDlqrBzjRNBITFN7yfa42ggFujQCRjGTKRRqFqFRdSgeUTFb3JZexp01nAch7aTbM0SmusV63sbOPKnU9Q4gWlLBQP6TCWMM5p6E1iUgksn4sJkLa86IZiPAZGAI4APVDczWpphRTnVpGG97bVF0EOKGvnDGWAE1tP46MrOWDaWV9877FnZ9ER2ljmZC7rVbBTEydSv6y90QTNuxIK5a0Pn7kvri3rhPQtVNyFOtwYxlz244HWmide0FZV79iKqh4HXKNnAp8nX1ecnB6tsJhCRgNVuLJ5Ykew1Xp1GdqytaZEKLoBc3MMBuhqWp35LLmkSwtazcByQl8TWylTFjYNnc5ucK94scmtd4V9h6Uml'
 
 if __name__=='__main__':
 	main()
 
-NusD21s3SKhG8GPL='NusD21s3SKhG8GPLtFIEYqpkUpL6t8pQ62F8kijHg2ZE0JT2xXuOPia6z6bliivqqDow8c9rOvdIzqLq4f1zxKLvqZc12aUL4erIeBEopf4GSxNvfAXNmpd9jGktaco2MFY8cTJIYMGt9uFIvywtbPC2PtOyFW2vh2ICExGwQwC6b0NbFLun7tgVQKvxrwDoM1IAZjZC9xLOH0z3G4ZR3sKlUgx6FPjpctGFUCSTgmuy2akR3SORqj8nZaxQJSuylLLNa22SEVzviPHNW08dp1ElpRQuQdWpwsnZmUb0DruLY4FuTB229ija0qGsWw7GNvnaXcJPHlkLzX2KxowbFfRCnR99lgF5qnbpLiRTBIalzShPnJFhWQmlvc26jlw2WvBz9HLStZQjG862pODdGxvILq86s0BfcysI03J5h2P3fdfQgxd6i7TzvYAv03OlLMRUeUDwKfYaneRoJ2343GBmox6xYEG5NxvH71TIdZ4r1AFpeNlQ40bo3PFbhwpTMx73pn6WONvff41bLZcwvYcWgc8QKorEVr4QMVERu0y0CphMrT6SgkXAMVlxQrcdJyO6KkH5qHNpVlJdUvXojspqOSK2lgT3O4AzNeTnwHtgZ4yl7LDXTcfUqMlm7pN4LB7NHNdJstgAxsIHn2m6EadoSXVs4hMW2CQJi9YG5r0fLpgQzwrDk9sfRkykq1hXHgaKtPavyqaKyWyLGKf0leZUwOJUCuAhOjA6FpMfoPGJr9NAx7RVxHGwH02tyqqUYF6D5OIhpYVU3fLuEycTQek8bbwj0fakW3yJbOo6lGpFkrsoMk6VvWQfJaTFXVbxrcvZ8UtZrGLd7oo9khW9P67L3Zy1p8QrLFhN9cFxFffwuzKNEYkwYLWO3knX2jsnkte8Y2SCWUQILBjeEMe9Nms'
+E5zUE8OXhxboIMKcu='E5zUE8OXhxboIMKcu7Zqk7GipgUPsfwQdz44PsObD7w1eTElDy0hHsmW6R21qQv4HdQQ64mn3RGXWqngwfVUp4TUVHaY8MlMWjZsfQM6DTsxpq4JdoDCbwz7WJx2cet9TnbhACGDhAq72Rx5gCJNHJREfICHfc7B2C6QiVELf5tvO3XVo4lDxKtpkPBqPAQewvYf0fuEqxly61p3lcRX9kOIYldx232YDVA4a4GS1TI30S5xH5vt2yuVz7xz4EKzGdCfxEL7vD9XaVQrMKcnhMyuk6GOREpJeZ7Dm4qnQOk0eitNH4cUViXtb57HHzpaB9mCRBMwgk5eonoQcTMoTFv9i6lUiKqHEsgk4cuYVI8giHthgMgQjVAB3TwQz9ppjcwTkoaVs7StIRhnrXarillXChfzLgxeQx50pg7yQQjrFn20MgmE67eGumCQ3OPgpsjWKZcBZoFiXbyVTElmtCDsWvtQPA5GaQNSndxwNPo9QyLgeVwhhWUhZri6ZtXtWrmwGhINoAbL3cmeBNlBQRjpHq2cJ7afEvBNLlT17BEnAUofpE1ebPf5cVebrdSAlQKNiseQJW8b5TKS6x1myUNKVAaK12BnqwQ77uk'
