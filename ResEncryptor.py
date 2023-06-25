@@ -17,12 +17,23 @@ import colorout as out
 import json
 import send2trash
 from shutil import copyfile
+import struct
 
 bErAcchwMGpML='bErAcchwMGpMLjsQVnH4oU1mPb2nCEbVMhHgebEVChhsAcrbRKOwEcYPa1lhfYDFRfJJxFdvICjfUgnrOHFVs2o9eiGJE0cQESLXOHiIMKxu4ukzh02KRg0rEXmlDQUJVUZ8NkcrmwfFkAaEUbllgdZEHA3Am2uxg1EutKTybvEYv36GzwAd3Rq0BzRKRAmv5lqeIToFV9WeVcxKxzNGeIGTFb6X7SFMawYxpvQY0Zkuqz6iTy4L0M5KQ93D4TR0MqfsBc4nV5oUT82i50C0eUYnl1EXhrBORiPrxhWhaHLBBJdvSAtA5yp8vfc97c4g93s4sVY2KOuWpX9jk3pzpppMghAymv2crOJITe2cVEbH6Rq2CaNxDWFsNP8NnAsqOIDoDiKqjopIRXiRH54lr9rf7gqv2ZLPrvU9WcNOHNX7vpAQRGOCZ3IKT8RmqLEhERNxc8Xrc4jYOBGgHNLrCi3xJ67R6vthV5iI4dgf8kdb3VWZ6K2atrjIP85pnn452lji2Sf4DjrXbXWuAex'
 
 VERSION={
 "appName":"ResEncryptor",
+"appNameCN":"资源加密压缩工具",
 "versionUpdate":[
+{
+	"mainVersion":"1.0.7",
+	"dateVersion":"20230625",
+	"versionDesc":[
+		"调整解密配置文件名的附加算法，改为随机异或。",
+		"调整解密配置重复迭代算法，减小密文数据体积。",
+		"调整解密配置重复迭代次数，大幅提升暴力破解时间成本。",
+	""]
+},
 {
 	"mainVersion":"1.0.6",
 	"dateVersion":"20230620",
@@ -103,8 +114,7 @@ defaultSalt='KnWn7ZYSa309KyYnruB0JXF9zIRAsQNx'
 # 随机文件头长度范围
 randomHeadLengthRange=[1024,2048]
 # 解密配置数据重复加密迭代次数
-# 最大不允许超过25次，每次迭代增加1/3大小
-encryptConfigRepeatCount=[20,20]
+encryptConfigRepeatCount=[10000,10000]
 # 混淆数据长度范围
 confuseLength=[4096,8192]
 
@@ -115,6 +125,9 @@ Utils
 '''
 def cmd(c):
 	os.system(c)
+
+def wait(n):
+	time.sleep(n)
 
 def runBat(batStr,output=''):
 	writeFile(f'{output}temp.bat',batStr)
@@ -224,7 +237,10 @@ def AES_Encrypt(password, data):
 	iv=hashlib.md5((key).encode(encoding='utf-8')).hexdigest()[0:16]
 	obj = AES.new((key).encode(), AES.MODE_CBC, (iv).encode())
 	# return base64.b64encode(obj.encrypt(pad(data.encode(),16)))
-	return obj.encrypt(pad(data.encode(),16))
+	# 对于字符串数据，将它转化为bytes
+	if isinstance(data,str):
+		data=data.encode(encoding='utf-8')
+	return obj.encrypt(pad(data,16))
 
 def AES_Decrypt(password, data):
 	key=hashlib.md5((password+defaultSalt).encode(encoding='utf-8')).hexdigest()
@@ -232,6 +248,14 @@ def AES_Decrypt(password, data):
 	obj = AES.new((key).encode(), AES.MODE_CBC, (iv).encode())
 	# return obj.decrypt(base64.b64decode(data))
 	return obj.decrypt(data)
+
+def xorStr(s,k):
+	r=b''
+	for c in s:
+		if isinstance(c,str):
+			c=ord(c)
+		r+=struct.pack('B',c^k)
+	return r
 
 fARnc9DTA7tfUh='fARnc9DTA7tfUhvjeCH98p6QpHBlsdS9qnKwFOL2lcjRypU9DBvhFmH0FZRnXb0nFzPjw8yIh8qF14l3qHTYVvlNOPQMqoipEtQyOLbmYlgJTaMVX3ZjBAlB0v2BpuA77g1A5d3BSP7Alq1MQXamKTKy9NYXdYOxWyD2NhUQPCxfaFEf4OKVgtr4k5LEd2zDTAWVHX5ZTZkH7Cn7bITFb5tvmcSQFsexjULN4RiC7LHAw1SQ0jFtPybYexjn2GgzbJQ7k1koZyZbFbOpGNpiURVr7UlEz45cILp0mtWj4S502oSR66TG7X1pc4AQvwvnZ8jWaQOu5mhLQZPJQrfz9V69p1EIqRtiuDUz5l0cRObTxFQb2TSlp3ul753xZZZ1vBcAJA8Ra6rXYdzv0VFBeCkMoD6eWJOOIGKUcwKRW83foIP4wm2mfV0tJlpmKKTMLOSdg4jqVUVnyONnit19K5ET3NhKgRof4J2CklfN5Rcs9TMeIvPLM4djItHL0AaJowOkfdngmJyDrbmKxmHqPGsHYKVZnnnQ5wZQJHROcBoZ2XrI8nEEkGgvemXAb1OCoGSSPW8OU1Msx16EqdJDJweZi6IkUCSYZ5C32WCc3XDdMeIfCBVy6lFEu3PFz0lZJ6r2IpZqh4fAZOctWxG3Q1xpk'
 
@@ -259,18 +283,23 @@ def applyFileData(file):
 '''
 def genEncryptConfig(chead, ctail, desc):
 	# ctype=1：混淆头尾合并；ctype=2：混淆头尾拆分
-	ctype=random.randint(1,2)
+	ctype=random.randint(1,3)
 	config={
 		'salt':genSalt(),
 		'description':desc,
 		'timestamp':int(time.time()),
 		'fileList':[],
 		'capsList':genCapsList(128),
+		'originHead':'',
 	}
 	if ctype==1:
 		config['confuse']=chead+ctail
 	elif ctype==2:
 		config['confuseHead']=chead
+		config['confuseTail']=ctail
+	elif ctype==3:
+		config['confuseHead']=chead
+		config['confuseMidd']=chead+ctail
 		config['confuseTail']=ctail
 	# 随机配置序列
 	ckeys=list(config.keys())
@@ -279,6 +308,16 @@ def genEncryptConfig(chead, ctail, desc):
 	for k in ckeys:
 		cconfig[k]=config[k]
 	return cconfig
+
+def xorEncConfigName(configName):
+	configNameXorNum=random.randint(8,255)
+	# 返回n+1字节，其中n字节为异或后的bytes，最后一位为异或码
+	return xorStr(configName,configNameXorNum) + struct.pack('B',configNameXorNum)
+
+def xorDecConfigName(configNameXorAll):
+	configNameXorStr=configNameXorAll[0:-1]
+	configNameXorNum=configNameXorAll[-1]
+	return xorStr(configNameXorStr, configNameXorNum)
 
 '''
 加密配置数据
@@ -292,10 +331,11 @@ def encryptEncryptConfig(password,config,chead,ctail):
 	# 使用多次加密迭代，增加解密时间成本，抗暴力破解
 	encryptCount=random.randint(encryptConfigRepeatCount[0], encryptConfigRepeatCount[1])
 	encConfigStr=f'{chead}\b{json.dumps(config,ensure_ascii=False)}\b{ctail}'
-	for i in range(0,encryptCount-1):
-		encConfigStr=base64.b64encode(AES_Encrypt(password,encConfigStr)).decode('UTF-8')
-	encConfigStr=AES_Encrypt(password,encConfigStr)
-
+	# for i in range(0,encryptCount-1):
+	# 	encConfigStr=base64.b64encode(AES_Encrypt(password,encConfigStr)).decode('UTF-8')
+	# encConfigStr=AES_Encrypt(password,encConfigStr)
+	for i in range(0,encryptCount):
+		encConfigStr=AES_Encrypt(password,encConfigStr)
 	return encConfigStr
 '''
 解密配置数据
@@ -308,20 +348,36 @@ def decryptEncryptConfig(password,data):
 	# return json.loads(config)
 	
 	# 使用多次加密迭代，增加解密时间成本，抗暴力破解
-	decData=AES_Decrypt(password,data)
+	# decData=AES_Decrypt(password,data)
+	# for i in range(0, encryptConfigRepeatCount[1]):
+	# 	decData=AES_Decrypt(password,base64.b64decode(decData))
+	# 	try:
+	# 		decSplit=decData.decode(encoding='utf-8').split('\b')
+	# 		if len(decSplit)==3:
+	# 			config=decSplit[1]
+	# 			try:
+	# 				return json.loads(config)
+	# 			except:
+	# 				pass
+	# 	except:
+	# 		pass
+	# return False
+	decConfigStr=data
 	for i in range(0, encryptConfigRepeatCount[1]):
-		decData=AES_Decrypt(password,base64.b64decode(decData))
 		try:
-			decSplit=decData.decode(encoding='utf-8').split('\b')
-			if len(decSplit)==3:
-				config=decSplit[1]
-				try:
-					return json.loads(config)
-				except:
-					pass
+			decConfigStr=AES_Decrypt(password,decConfigStr)
 		except:
-			pass
-	return False
+			# 当AES无法正确解码时，循环终止，进行后续处理
+			break
+	decSplit=decConfigStr.decode('utf-8','ignore').split('\b')
+	if len(decSplit)>=3:
+		config=decSplit[1]
+		try:
+			return json.loads(config)
+		except:
+			return False
+	else:
+		return False
 '''
 根据配置计算压缩包密钥
 参数：密码，配置数据
@@ -452,11 +508,14 @@ def beginEncryptFiles(file):
 
 		# 生成混淆后的配置数据
 		out.outC('正在生成混淆配置数据……','cyan','black',1)
+		configBeginTime=time.time()
 		configName=genSalt()
 		decryptConfigString=encryptEncryptConfig(password, encryptConfig, confuseHead, confuseTail)
 		writeFile(f'{projOutputDir}\\{configName}',decryptConfigString,'wb')
-		writeFile(f'{projOutputDir}\\{projCfgname}',configName) # 用python将文件名写入到临时文件中，以待后续合并使用。不能使用bat的echo，会输出空行
-		out.outlnC('[完成]','green','black',1)
+		# writeFile(f'{projOutputDir}\\{projCfgname}',configName) # 用python将文件名写入到临时文件中，以待后续合并使用。不能使用bat的echo，会输出空行
+		writeFile(f'{projOutputDir}\\{projCfgname}',xorEncConfigName(configName),'wb') # 用python将文件名写入到临时文件中，以待后续合并使用。不能使用bat的echo，会输出空行
+		configEndTime=time.time()
+		out.outlnC(f'[完成，用时{round(configEndTime - configBeginTime, 2)}秒]','green','black',1)
 
 		# 复制执行文件到输出目录
 		out.outC('正在生成解压程序……','cyan','black',1)
@@ -487,7 +546,8 @@ def beginDecryptFiles():
 	f=open(execFileName,'rb')
 	fileData=f.read()
 	f.close()
-	configName=fileData[-32:].decode('utf-8')
+	# configName=fileData[-32:].decode('utf-8')
+	configName=xorDecConfigName(fileData[-33:])
 	alreadyTiped=False
 	while True:
 		if not exist(configName):
@@ -513,15 +573,18 @@ def beginDecryptFiles():
 		out.outlnC('开始进行解压！','black','green',1)
 		# 解密配置数据
 		out.outC('正在解密配置数据……','cyan','black',1)
+		configBeginTime=time.time()
 		try:
 			encryptConfig=decryptEncryptConfig(password, loadFile(configName,'rb'))
 			if encryptConfig!=False:
-				out.outlnC('[完成]','green','black',1)
+				configEndTime=time.time()
+				out.outlnC(f'[完成，用时{round(configEndTime - configBeginTime, 2)}秒]','green','black',1)
 				break
 			else:
 				out.outlnC('[解密失败！密码错误？]','red','black',1)
-		except:
-			out.outlnC('[解密失败！密码错误？]','red','black',1)
+		except Exception as e:
+			out.outlnC('[解密错误！算法有误？]','red','black',1)
+			out.outlnC(e,'red','black',1)
 	
 	# 输出描述和欢迎信息
 	if encryptConfig['description']!='':
