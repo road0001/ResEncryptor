@@ -1,4 +1,6 @@
 @echo off
+echo Running scripts...
+randomGenerate.py ResEncryptor.py
 echo Building Execute file...
 pyinstaller -F -i icon.ico ResEncryptor.py
 pause
