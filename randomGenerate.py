@@ -6,8 +6,8 @@ import ResEncryptor as r
 from shutil import copyfile
 
 count=10
-randomRange=[1024,8192]
-randomVarRange=[8,16]
+randomRange=[1024,16384]
+randomVarRange=[16,128]
 splitKeywords='########## CONFUSE ##########\n'
 
 def backupFile(file):
