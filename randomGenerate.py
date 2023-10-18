@@ -40,15 +40,22 @@ def confuseFile(file):
 
 if __name__=='__main__':
 	if len(sys.argv)<=1:
-		rstr=''
-		for i in range(0,count):
-			rstr+=r.randomPassword(random.randint(randomRange[0],randomRange[1]))
-			rstr+='\n'
-		f=open('random.txt','w')
-		f.write(rstr)
-		f.close()
-		print(rstr)
-		r.pause()
+		rdinput=input('请输入生成的随机数长度，留空将按照默认方式生成：')
+		if rdinput=='':
+			rstr=''
+			for i in range(0,count):
+				rstr+=r.randomPassword(random.randint(randomRange[0],randomRange[1]))
+				rstr+='\n'
+			f=open('random.txt','w')
+			f.write(rstr)
+			f.close()
+			print(rstr)
+		else:
+			rdCount=int(rdinput)
+			f=open('random.txt','wb')
+			f.write(r.randomBin(rdCount))
+			f.close()
+		r.pause('按任意键退出。')
 	elif len(sys.argv)==2:
 		backupFile(sys.argv[1])
 		confuseFile(sys.argv[1])
