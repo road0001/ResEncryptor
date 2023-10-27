@@ -63,6 +63,43 @@ def randomSelectName():
 	randomSelectNameAlready.append(nameFinally)
 	return nameFinally
 
+numberSelectNameIndex=0
+def numberSelectName():
+	global numberSelectNameIndex
+	numStr=f'{numberSelectNameIndex}'
+	numberSelectNameIndex+=1
+	return numStr
+
+charSelectNameIndex=0
+def charSelectName():
+	global charSelectNameIndex
+	charStr=f'{decTo26(charSelectNameIndex)}'
+	charSelectNameIndex+=1
+	return charStr.lower()
+
+sequence = list( map( lambda x: chr( x ), range( ord( 'A' ), ord( 'Z' ) + 1 ) ) )
+def decTo26(num):
+	d, m = divmod(num,26) # 26 is the number of ASCII letters
+	return '' if num < 0 else decTo26(d-1)+chr(m+65) # chr(65) = 'A'
+	# global sequence
+	# L = []
+	# num=num-1;  #实现从1对应A
+	# if num > 25:
+	# 	while True:
+	# 		d = int( num / 26 )
+	# 		remainder = num % 26
+	# 		if d <= 25:
+	# 			L.insert( 0, sequence[remainder] )
+	# 			L.insert( 0, sequence[d - 1] )
+	# 			break
+	# 		else:
+	# 			L.insert( 0, sequence[remainder] )
+	# 			num = d - 1
+	# else:
+	# 	L.append( sequence[num] )
+	# return "".join( L )
+
+
 if __name__=='__main__':
 	# for i in range(0,1000):
 	# 	print(randomSelectName())
