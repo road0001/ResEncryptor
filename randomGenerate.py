@@ -6,7 +6,8 @@ import ResEncryptor as r
 from shutil import copyfile
 
 count=10
-randomRange=[1024,16384]
+# randomRange=[1024,16384]
+randomRange=[10240,65536]
 randomVarRange=[16,128]
 splitKeywords='########## CONFUSE ##########\n'
 

@@ -77,6 +77,15 @@ def charSelectName():
 	charSelectNameIndex+=1
 	return charStr.lower()
 
+originalSelectNameIndex=1
+def originalSelectName(originName):
+	global originalSelectNameIndex
+	numStr=str(originalSelectNameIndex).zfill(4)
+	nameStr=f'{originName}.{numStr}'
+	originalSelectNameIndex+=1
+	return nameStr
+
+
 sequence = list( map( lambda x: chr( x ), range( ord( 'A' ), ord( 'Z' ) + 1 ) ) )
 def decTo26(num):
 	d, m = divmod(num,26) # 26 is the number of ASCII letters
