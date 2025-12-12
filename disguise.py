@@ -2,7 +2,7 @@ import random
 import re
 
 # 随机后缀池
-randomExtPool=['bin:10','dll:20','pkg:10','dat:5','efi:8','lib:8','wim:5','drv:5','sys:4','pyc:1','img:1','fbx:2','pif:3','cat:1','db:2','ocx:0',':50']
+randomExtPool=['bin:10','dll:20','pkg:10','dat:5','efi:8','lib:8','wim:5','drv:5','sys:4','pyc:1','img:1','fbx:2','pif:3','cat:1','db:2','ocx:0',':0']
 randomNamePool=[
 	'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
 	'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
